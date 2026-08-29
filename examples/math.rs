@@ -1,5 +1,5 @@
-use jstd::math::{gcd, lcm, lerp};
-use jstd::write_line;
+use jstdlib::math::{gcd, lcm, lerp};
+use jstdlib::write_line;
 
 fn main() {
     let greatest = gcd(48, 18);

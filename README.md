@@ -1,8 +1,8 @@
-# jstd
+# jstdlib
 
 A collection of practical utilities for Rust.
 
-> **jstd** is an early-stage utility crate focused on making common Rust tasks simpler and more convenient.
+> **jstdlib** is an early-stage utility crate focused on making common Rust tasks simpler and more convenient.
 
 ## Features
 
@@ -12,27 +12,27 @@ A collection of practical utilities for Rust.
 
 ## Installation
 
-Add `jstd` to your project with Cargo:
+Add `jstdlib` to your project with Cargo:
 
 ```bash
-cargo add jstd
+cargo add jstdlib
 ```
 
 Or add it manually to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-jstd = "0.1"
+jstdlib = "0.1"
 ```
 
 ## Quick Start
 
 ### Console
 
-JSTD provides convenient console input and output utilities:
+Jstdlib provides convenient console input and output utilities:
 
 ```rust
-use jstd::console::Console;
+use jstdlib::console::Console;
 
 Console::write_line("Hello, world!");
 
@@ -46,7 +46,7 @@ Console::write_line(&format!("You are {age} years old."));
 You can also use the formatting macros:
 
 ```rust
-use jstd::write_line;
+use jstdlib::write_line;
 
 let name = "Someone";
 let age = 21;
@@ -57,10 +57,10 @@ write_line!("Age: {age}");
 
 ### Collections
 
-JSTD provides functional-style utilities for working with collections:
+Jstdlib provides functional-style utilities for working with collections:
 
 ```rust
-use jstd::collections::vec;
+use jstdlib::collections::vec;
 
 let numbers = vec![1, 2, 3, 4, 5, 6];
 
@@ -90,7 +90,7 @@ Available utilities currently include:
 Common mathematical utilities:
 
 ```rust
-use jstd::math::{gcd, lcm, lerp};
+use jstdlib::math::{gcd, lcm, lerp};
 
 let greatest = gcd(48, 18);
 let least = lcm(12, 18);
@@ -113,7 +113,7 @@ println!("Lerp: {interpolated}");
 
 **Early development — v0.1.0**
 
-JSTD is currently a small utility crate and its API may evolve as the project develops.
+Jstdlib is currently a small utility crate and its API may evolve as the project develops.
 
 The goal is not to replace Rust's standard library, but to provide convenient abstractions for tasks where they make sense.
 

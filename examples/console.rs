@@ -1,5 +1,5 @@
-use jstd::console::Console;
-use jstd::write_line;
+use jstdlib::console::Console;
+use jstdlib::write_line;
 
 fn main() {
     Console::write_line("JSTD Console Demo");

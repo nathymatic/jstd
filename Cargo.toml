@@ -1,5 +1,5 @@
 [package]
-name = "jstd"
+name = "jstdlib"
 version = "0.1.0"
 edition = "2024"
 description = "Practical utilities for Rust."
