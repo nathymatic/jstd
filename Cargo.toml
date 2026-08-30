@@ -8,3 +8,5 @@ readme = "README.md"
 repository = "https://github.com/jayywashere/jstd"
 
 [dependencies]
+crossterm = "0.29.0"
+rpassword = "7.5.4"

@@ -11,9 +11,10 @@ pub enum ScanMode {
 /// * Provides utility functions for reading and parsing command-line inputs.
 pub struct Scanner {}
 impl Scanner {
+    
     /// * Reads a line from standard input and parses it into an `i32` integer.
     pub fn next_int() -> i32 {
-        Console::read_line().parse().unwrap()
+        Console::read()
     }
 
     /// * Reads a line from standard input and parses it into an `i32` integer based on the specified `ScanMode`.
@@ -38,7 +39,7 @@ impl Scanner {
 
     /// * Reads a line from standard input and parses it into an `f64` float.
     pub fn next_float() -> f64 {
-        Console::read_line().parse().unwrap()
+        Console::read()
     }
 
     /// * Reads a line from standard input and parses it into an `f64` float based on the specified `ScanMode`.

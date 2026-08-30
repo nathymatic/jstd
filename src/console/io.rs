@@ -2,8 +2,12 @@ use std::fmt::Display;
 use std::io::{self, Write};
 use std::str::FromStr;
 
+use crossterm::event::{self, Event, KeyEvent};
+use rpassword::read_password;
+
 /// * Provides utility functions for immediate console input and output.
 pub struct Console {}
+
 impl Console {
     /// * Prints a value to the standard output and immediately flushes the stream.
     pub fn write<T: Display>(value: T) {
@@ -28,9 +32,18 @@ impl Console {
     pub fn read_line() -> String {
         let mut input = String::new();
 
-        std::io::stdin().read_line(&mut input).unwrap();
+        io::stdin().read_line(&mut input).unwrap();
 
         input.trim_end().to_string()
+    }
+
+    /// * Reads and returns the next key event from standard input.
+    pub fn read_key() -> io::Result<KeyEvent> {
+        loop {
+            if let Event::Key(key) = event::read()? {
+                return Ok(key);
+            }
+        }
     }
 
     /// * Displays a prompt and parses the user input into the requested type `T`.
@@ -53,6 +66,12 @@ impl Console {
                 _ => Self::write_line("Please enter yes or no."),
             }
         }
+    }
+
+    /// * Displays a prompt and reads user input without displaying the entered characters.
+    pub fn password(prompt: &str) -> io::Result<String> {
+        Self::write(prompt);
+        read_password()
     }
 
     /// * Clears the terminal screen.
