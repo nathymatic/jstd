@@ -1,35 +1,40 @@
 # jstdlib
 
-A collection of practical utilities for Rust.
+> some practical Rust utilities because i got tired of writing the same crap over and over
 
-> **jstdlib** is an early-stage utility crate focused on making common Rust tasks simpler and more convenient.
+## About
+
+basically, this is my little Rust utility crate for things i find useful enough to not want to rewrite every time
+
+it currently has utilities for console input/output, collections, and math, with more stuff probably getting added as i go
 
 ## Features
 
-* 🖥️ **Console utilities** — convenient console input and output
-* 📦 **Collection utilities** — practical helpers for slices and vectors
-* 🔢 **Math utilities** — common mathematical operations
+* `console` -- convenient console input and output
+* `collections` -- useful helpers for vectors and slices
+* `math` -- common mathematical utilities
+
+## Requirements
+
+* Rust
+* Cargo
 
 ## Installation
-
-Add `jstdlib` to your project with Cargo:
 
 ```bash
 cargo add jstdlib
 ```
 
-Or add it manually to your `Cargo.toml`:
+or add it manually to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-jstdlib = "0.1"
+jstdlib = "0.1.1"
 ```
 
-## Quick Start
+## Usage
 
 ### Console
-
-Jstdlib provides convenient console input and output utilities:
 
 ```rust
 use jstdlib::console::Console;
@@ -43,7 +48,7 @@ Console::write_line(&format!("Hello, {name}!"));
 Console::write_line(&format!("You are {age} years old."));
 ```
 
-You can also use the formatting macros:
+you can also use the formatting macros if you wanna keep things concise or don't wanna use the ugly &format!() boilerplate:
 
 ```rust
 use jstdlib::write_line;
@@ -56,8 +61,6 @@ write_line!("Age: {age}");
 ```
 
 ### Collections
-
-Jstdlib provides functional-style utilities for working with collections:
 
 ```rust
 use jstdlib::collections::vec;
@@ -73,7 +76,7 @@ println!("{doubled:?}");
 println!("{found:?}");
 ```
 
-Available utilities currently include:
+currently available:
 
 * `filter`
 * `map`
@@ -85,9 +88,9 @@ Available utilities currently include:
 * `chunk`
 * `partition`
 
-### Math
+i might've genuinely missed some, just check (if you want)
 
-Common mathematical utilities:
+### Math
 
 ```rust
 use jstdlib::math::{gcd, lcm, lerp};
@@ -101,22 +104,6 @@ println!("LCM: {least}");
 println!("Lerp: {interpolated}");
 ```
 
-## Modules
-
-| Module        | Description                        |
-| ------------- | ---------------------------------- |
-| `console`     | Console input and output utilities |
-| `collections` | Collection and slice utilities     |
-| `math`        | Common mathematical utilities      |
-
-## Status
-
-**Early development — v0.1.0**
-
-Jstdlib is currently a small utility crate and its API may evolve as the project develops.
-
-The goal is not to replace Rust's standard library, but to provide convenient abstractions for tasks where they make sense.
-
 ## License
 
-Licensed under the MIT License.
+See [LICENSE](LICENSE).
