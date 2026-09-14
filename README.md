@@ -21,7 +21,7 @@ it currently has utilities for console input/output, collections, and math, with
 
 ## Installation
 
-```bash
+```powershell
 cargo add jstdlib
 ```
 
@@ -48,7 +48,7 @@ Console::write_line(&format!("Hello, {name}!"));
 Console::write_line(&format!("You are {age} years old."));
 ```
 
-you can also use the formatting macros if you wanna keep things concise or don't wanna use the ugly &format!() boilerplate:
+you can also use the formatting macros if you wanna keep things concise or don't wanna use the ugly format!() boilerplate:
 
 ```rust
 use jstdlib::write_line;
@@ -103,6 +103,10 @@ println!("GCD: {greatest}");
 println!("LCM: {least}");
 println!("Lerp: {interpolated}");
 ```
+
+## Contribution
+
+See [CONTRIBUTING](CONTRIBUTING).
 
 ## License
 
