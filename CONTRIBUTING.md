@@ -18,7 +18,7 @@ you'll need:
 clone the repository and enter the project directory:
 
 ```powershell
-git clone https://github.com/jayywashere/jstd
+git clone https://github.com/nathymatic/jstd
 cd jstd
 ```
 

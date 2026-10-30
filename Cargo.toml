@@ -5,7 +5,7 @@ edition = "2024"
 description = "Practical utilities for Rust."
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/jayywashere/jstd"
+repository = "https://github.com/nathymatic/jstd"
 
 [dependencies]
 crossterm = "0.29.0"
